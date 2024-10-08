@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keerthi S R</title>
+    <style>
+         .nav-main{
+            width: 100vh;
+        } 
+         body{
+            background-color:  rgb(233, 225, 217);
+         }
+        .nav {
+            display: flex;
+            align-items: center;
+            width:99%;
+            justify-content: space-evenly;
+            background-color: rgb(176, 160, 142);
+            font-weight: bold;
+            position:fixed;
+            /* padding-bottom: 40px; */
+            top:0; 
+        }
+
+        #child1 {
+            width: 30%;
+            font-size: large;
+            align-items: center;
+        }
+
+        #child2 {
+            width: 20%;
+        }
+
+        #child3 {
+            width: 40%;
+        }
+
+        #child3 ul {
+            list-style-type: none;
+            display: flex;
+            font-size: larger;
+            justify-content: space-evenly;
+
+        }
+        .container-about{
+            align-content: center;
+            padding-top: 38px;
+            text-align: center;
+            width: 100vh;
+            margin: auto;
+            /* background-color: #b5b8ba; */
+        }
+
+        .about h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #373535;
+            text-align: center;
+        }
+
+        .about img {
+            border-radius: 50%;
+        }
+         #resume{
+            background-color:rgb(212, 212, 199);
+            text-align: center;
+            font-size:x-large;
+            height:5vh;
+            padding-top: 7px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        } 
+        .about p{
+            display: block;
+            text-align: center;
+            font-size: larger;
+            margin-top: 20px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        a{
+             color: #000305; 
+            text-decoration: none;
+            background-color: transparent;
+        }
+        .container-skills{
+            padding-top: 38px;
+            align-content: center;
+            text-align: center;
+            width: 170vh;
+            margin: auto;
+        }
+
+        .skills h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #373535;
+            text-align: center;
+        }
+        .row{
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        .col-skill{
+            -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        .skill-icon{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+        }
+        .col-skill p{
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .container-certificate{
+            padding-top: 38px;
+            align-content: center;
+            text-align: center;
+            width: 170vh;
+            margin: auto;
+        }
+        .certifications h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #373535;
+            text-align: center;
+        }
+        .about a{
+            font-size:x-large;
+            font-weight: bold;
+            color: #6f6c6c;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .col-certificate{
+            -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        .col-certificate{
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            /* margin-left: 60px; */
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .col-certificate{
+            position: relative;
+            width: 80%;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+        .btn:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }  
+        .btn-gradient {
+            background: linear-gradient(to right, #e1b7ac, #afaaa6);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .btn{
+            display: inline-block;
+            font-weight: 400;
+            color: #212529;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+        }
+        .education{
+            padding-top: 38px;
+            align-content: center;
+            text-align: center;
+            width: 201vh;
+            /* background-color: rgb(219, 212, 203); */
+            margin: auto;
+        }
+        .educationDetails h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #373535;
+            text-align: center;
+        }
+        .educationDetails{
+            width:150vh;
+            align-items: center;
+            margin-left: 180px;
+            height:65vh;
+        }
+        .education-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+             /* margin-bottom: 20px;  */
+        }
+        .contact{
+            padding-top: 38px;
+            align-content: center;
+            text-align: center;
+            width: 201vh;
+            /* background-color: rgb(219, 212, 203); */
+            margin: auto;
+        } 
+        .contactInfo{
+            width:200vh;
+            align-items: center;
+            /* margin-left: 35px; */
+            height:35vh;
+         background-color: #d4d0cc; 
+        } 
+        .contactInfo h2 {
+            font-size: 2.5em;
+            padding-top: 30px;
+            /* margin-bottom: 10px; */
+            color: #373535;
+            text-align: center;
+        }
+        .contactInfo p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        } 
+        .social-icon img{
+            border-radius: 50%;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="nav-main">
+        <div class="nav">
+            <div id="child1">
+                <h2>Keerthi S R</h2>
+            </div>
+            <div id="child2"></div>
+            <div id="child3">
+                <ul>
+                    <li><a href="#aboutOne">About</a></li>
+                    <li><a href="#skillsOn">Skills</a></li>
+                    <li><a href="#certificateOn">Certification</a></li>
+                    <li><a href="#educationInfo">Education</a></li>
+                    <li><a href="#contactMe">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section id="aboutOne">
+        <div class="container-about">
+            <div class="about">
+                <h1>About me</h1>
+                <img src="profile.jpg" alt="Keerthi S R" type="image" height="150vh" width="150vh"><br>
+                <p>Hello, I am Keerthi S R, excited about the opportunity to
+                contribute to organisation and eager to apply my
+                skills and knowledge to make meaningful
+                contribution. Aspiring to work
+                with an organization that offers responsible
+                position.</p>
+                <!-- <p id="resume"><a href="RESUME_KEERTHI_S_R.pdf" target="_blank">Resume</a></p> -->
+            </div>
+        </div>
+    </section>
+    <div class="resume">
+        <p id="resume"><a href="RESUME_KEERTHI_S_R.pdf" target="_blank">Resume</a></p>
+    </div>
+    <section id="skillsOn">
+        <div class="container-skills">
+            <div class="skills">
+                <h1>Skills</h1>
+                <div class="row">
+                    <div class="col-skill">
+                        <img src="JAVA.svg" alt="java-icon" class="skill-icon">
+                        <h3>Java</h3>
+                        <p>Skilled in java programming</p>
+                    </div>
+                    <div class="col-skill">
+                        <img src="HTML.svg" alt="html-icon" class="skill-icon">
+                        <h3>HTML</h3>
+                        <p>Proficient in HTML for web development</p>
+                    </div>
+                    <div class="col-skill">
+                        <img src="CSS.svg" alt="css-icon" class="skill-icon">
+                        <h3>CSS</h3>
+                        <p>Expert in CSS for styling a webpages</p>
+                    </div>
+                    <div class="col-skill">
+                        <img src="PYTHON.svg" alt="python-icon" class="skill-icon">
+                        <h3>Python</h3>
+                        <p>Beginner to python programming</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="certificateOn">
+        <div class="container-certificate">
+            <div class="certifications">
+                <h1>Certificates</h1>
+                <div class="row">
+                    <div class="col-certificate">
+                        <h4>Programming in Java</h4>
+                        <a href="Programming In Java.pdf" target="_blank" class="btn btn-gradient">NPTEL</a>
+                    </div>
+                    <div class="col-certificate">
+                        <h4>Introduction to Machine Learning</h4>
+                        <a href="MOOC COURSE Certificate.pdf" target="_blank" class="btn btn-gradient">MOOC</a>
+                    </div>
+                    <div class="col-certificate">
+                        <h4>National Conference on Exploring the Synergy on AIML & IoT</h4>
+                        <a href="Cert.jpg" target="_blank" class="btn btn-gradient">JNNCE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="educationInfo">
+        <div class="education">
+            <div class="educationDetails">
+                <h1>Education</h1>
+                <div class="clg">
+                    <img src="JNNCE-icon.jpg" alt="master's" class="education-icon">
+                    <h2>Master of Computer Applications</h2>
+                    <p>Jawaharlal Nehru National College of Engineering</p>
+                    <h4>Shivamogga||Karnataka</h4>
+                </div>
+                <div class="clg">
+                    <img src="IG.jpg" alt="bachelor's" class="education-icon">
+                    <h2>Master of Computer Applications</h2>
+                    <p>Smt. Indira Gandhi Govt. First Grade Women's college</p>
+                    <h4>Sagara||Karnataka</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contactMe">
+        <div class="contact">
+            <div class="contactInfo">
+                <h2>Contact</h2>
+                <p>You may communicate with me at any time!..</p>
+                <div class="social-icon">
+                    <a href="mailto:keerthisr0102@gmail.com" target="_blank" title="Email">
+                        <img src="Email.png" rel="icon" type="image/x-icon" height="45vh" width="45vh">
+                    </a>
+                    <a href="https://github.com/KeerthiSR01" target="_blank" title="GitHub">
+                        <img src="github.jpg" rel="icon" type="image/x-icon" height="45vh" width="45vh">
+                    </a>
+                    <a href="https://www.linkedin.com/in/keerthi-sr-57036b289/" target="_blank" title="LinkedIn">
+                        <img src="LinkedIn.png" rel="icon" type="image/x-icon" height="45vh" width="45vh">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

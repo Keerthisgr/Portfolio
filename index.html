@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keerthi S R</title>
     <script>
-        document.addEventListener('contextmenu', function(event) {
+        document.addEventListener('contextmenu', function (event) {
             event.preventDefault();
         });
-        
-        document.onkeydown = function(e) {
+
+        document.onkeydown = function (e) {
             if (e.key == "F12" || (e.ctrlKey && e.shiftKey && e.key == "I")) {
                 e.preventDefault();
             }
@@ -20,21 +20,30 @@
         /* For small devices like mobile phones */
         @media screen and (max-width: 600px) {
             .nav {
-                flex-direction: column; /* Stack navigation items vertically */
+                flex-direction: column;
+                /* Stack navigation items vertically */
                 text-align: center;
             }
 
             .nav ul {
-                flex-direction: column; /* Stack navigation links vertically */
+                flex-direction: column;
+                /* Stack navigation links vertically */
                 width: 100%;
             }
 
-            .container-about, .container-skills, .container-certificate, .education, .contact {
-                width: 100%; /* Use full width of the viewport */
+            .container-about,
+            .container-skills,
+            .container-certificate,
+            .education,
+            .contact {
+                width: 100%;
+                /* Use full width of the viewport */
             }
 
-            .skills .col-skill, .certifications .col-certificate {
-                width: 100%; /* Make skill and certification items full-width */
+            .skills .col-skill,
+            .certifications .col-certificate {
+                width: 100%;
+                /* Make skill and certification items full-width */
                 max-width: 100%;
                 margin-bottom: 20px;
             }
@@ -45,44 +54,54 @@
             }
 
             img {
-                width: 100px; /* Resize images for mobile */
+                width: 100px;
+                /* Resize images for mobile */
                 height: auto;
             }
 
-            .skill-icon, .education-icon, .social-icon img {
-                width: 40px; /* Smaller icons for mobile */
+            .skill-icon,
+            .education-icon,
+            .social-icon img {
+                width: 40px;
+                /* Smaller icons for mobile */
                 height: 40px;
             }
 
-            h1, h2 {
-                font-size: 1.8em; /* Adjust font sizes for readability on small screens */
+            h1,
+            h2 {
+                font-size: 1.8em;
+                /* Adjust font sizes for readability on small screens */
             }
 
             p {
                 font-size: 1em;
             }
         }
-        *{
+
+        * {
             scroll-behavior: smooth;
         }
-         .nav-main{
+
+        .nav-main {
             width: 100vw;
-        } 
-         body{
-            background-color:  rgb(233, 225, 217);
-         }
+        }
+
+        body {
+            background-color: rgb(233, 225, 217);
+        }
+
         .nav {
             display: flex;
             align-items: center;
-            width:100%;
+            width: 100%;
             justify-content: space-evenly;
             background-color: rgb(176, 160, 142);
             z-index: 1000;
-            width: 100%; 
+            width: 100%;
             font-weight: bold;
-            position:fixed;
+            position: fixed;
             /* padding-bottom: 40px; */
-            top:0; 
+            top: 0;
             left: 0;
             right: 0;
         }
@@ -108,7 +127,8 @@
             justify-content: space-evenly;
 
         }
-        .container-about{
+
+        .container-about {
             align-content: center;
             padding-top: 38px;
             text-align: center;
@@ -127,27 +147,31 @@
         .about img {
             border-radius: 50%;
         }
-         #resume{
-            background-color:rgb(212, 212, 199);
+
+        #resume {
+            background-color: rgb(212, 212, 199);
             text-align: center;
-            font-size:x-large;
-            height:5vh;
+            font-size: x-large;
+            height: 5vh;
             padding-top: 7px;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-        } 
-        .about p{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .about p {
             display: block;
             text-align: center;
             font-size: larger;
             margin-top: 20px;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
-        a{
-             color: #000305; 
+
+        a {
+            color: #000305;
             text-decoration: none;
             background-color: transparent;
         }
-        .container-skills{
+
+        .container-skills {
             padding-top: 38px;
             align-content: center;
             text-align: center;
@@ -161,7 +185,8 @@
             color: #373535;
             text-align: center;
         }
-        .row{
+
+        .row {
             display: -ms-flexbox;
             display: flex;
             -ms-flex-wrap: wrap;
@@ -169,62 +194,73 @@
             margin-right: -15px;
             margin-left: -15px;
         }
-        .col-skill{
+
+        .col-skill {
             -ms-flex: 0 0 25%;
             flex: 0 0 25%;
             max-width: 25%;
         }
-        .skill-icon{
+
+        .skill-icon {
             width: 50px;
             height: 50px;
             margin-bottom: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
         }
-        .col-skill p{
+
+        .col-skill p {
             font-size: 1.15em;
             margin-bottom: 20px;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
-        .container-certificate{
+
+        .container-certificate {
             padding-top: 38px;
             align-content: center;
             text-align: center;
             width: 170vh;
             margin: auto;
         }
+
         .certifications h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
             color: #373535;
             text-align: center;
         }
-        .about a{
-            font-size:x-large;
+
+        .about a {
+            font-size: x-large;
             font-weight: bold;
             color: #6f6c6c;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
-        .col-certificate{
+
+        .col-certificate {
             -ms-flex: 0 0 25%;
             flex: 0 0 25%;
             max-width: 25%;
         }
-        .col-certificate{
+
+        .col-certificate {
             font-size: 1.15em;
             margin-bottom: 20px;
             /* margin-left: 60px; */
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
-        .col-certificate{
+
+        .col-certificate {
             position: relative;
             width: 80%;
             padding-right: 50px;
             padding-left: 50px;
         }
+
         .btn:not(:disabled):not(.disabled) {
             cursor: pointer;
-        }  
+        }
+
         .btn-gradient {
             background: linear-gradient(to right, #e1b7ac, #afaaa6);
             border: none;
@@ -234,7 +270,8 @@
             cursor: pointer;
             transition: background 0.3s ease;
         }
-        .btn{
+
+        .btn {
             display: inline-block;
             font-weight: 400;
             color: #212529;
@@ -251,7 +288,8 @@
             line-height: 1.5;
             border-radius: .25rem;
         }
-        .education{
+
+        .education {
             padding-top: 38px;
             align-content: center;
             text-align: center;
@@ -259,39 +297,45 @@
             /* background-color: rgb(219, 212, 203); */
             margin: auto;
         }
+
         .educationDetails h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
             color: #373535;
             text-align: center;
         }
-        .educationDetails{
-            width:150vh;
+
+        .educationDetails {
+            width: 150vh;
             align-items: center;
             margin-left: 180px;
-            height:65vh;
+            height: 65vh;
         }
+
         .education-icon {
             width: 60px;
             height: 60px;
             border-radius: 50%;
-             /* margin-bottom: 20px;  */
+            /* margin-bottom: 20px;  */
         }
-        .contact{
+
+        .contact {
             padding-top: 38px;
             align-content: center;
             text-align: center;
             width: 201vh;
             /* background-color: rgb(219, 212, 203); */
             margin: auto;
-        } 
-        .contactInfo{
-            width:200vh;
+        }
+
+        .contactInfo {
+            width: 200vh;
             align-items: center;
             /* margin-left: 35px; */
-            height:35vh;
-         background-color: #d4d0cc; 
-        } 
+            height: 35vh;
+            background-color: #d4d0cc;
+        }
+
         .contactInfo h2 {
             font-size: 2.5em;
             padding-top: 30px;
@@ -299,13 +343,15 @@
             color: #373535;
             text-align: center;
         }
-        .contactInfo p{
+
+        .contactInfo p {
             font-family: Arial, Helvetica, sans-serif;
             font-size: large;
-        } 
-        .social-icon img{
+        }
+
+        .social-icon img {
             border-radius: 50%;
-        } 
+        }
     </style>
 </head>
 
@@ -332,18 +378,15 @@
             <div class="about">
                 <h1>About me</h1>
                 <img src="images/profile.jpg" alt="Keerthi S R" type="image" height="150vh" width="150vh"><br>
-                <p>Hello, I am Keerthi S R, excited about the opportunity to
-                contribute to organisation and eager to apply my
-                skills and knowledge to make meaningful
-                contribution. Aspiring to work
-                with an organization that offers responsible
-                position.</p>
+                <p>Hello, I am Keerthi S R, a motivated and an independent individual dedicated to delivering excellent
+                    results, with my ability to learn fast and engage in active listening, I'm eager to apply my skills and knowledge
+                    to make a difference. I'm seeking a responsible role in a reputable organization.</p>
                 <!-- <p id="resume"><a href="RESUME_KEERTHI_S_R.pdf" target="_blank">Resume</a></p> -->
             </div>
         </div>
     </section>
     <div class="resume">
-        <p id="resume"><a href="cv/RESUME_KEERTHI_S_R.pdf" target="_blank">Resume</a></p>
+        <p id="resume"><a href="cv/KeerthiSR.pdf" target="_blank">Resume</a></p>
     </div>
     <section id="skillsOn">
         <div class="container-skills">
@@ -381,11 +424,13 @@
                 <div class="row">
                     <div class="col-certificate">
                         <h4>Programming in Java</h4>
-                        <a href="certificates/Programming In Java.pdf" target="_blank" class="btn btn-gradient">NPTEL</a>
+                        <a href="certificates/Programming In Java.pdf" target="_blank"
+                            class="btn btn-gradient">NPTEL</a>
                     </div>
                     <div class="col-certificate">
                         <h4>Introduction to Machine Learning</h4>
-                        <a href="certificates/MOOC COURSE Certificate.pdf" target="_blank" class="btn btn-gradient">MOOC</a>
+                        <a href="certificates/MOOC COURSE Certificate.pdf" target="_blank"
+                            class="btn btn-gradient">MOOC</a>
                     </div>
                     <div class="col-certificate">
                         <h4>National Conference on Exploring the Synergy on AIML & IoT</h4>

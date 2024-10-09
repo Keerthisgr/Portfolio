@@ -5,9 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keerthi S R</title>
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+        
+        document.onkeydown = function(e) {
+            if (e.key == "F12" || (e.ctrlKey && e.shiftKey && e.key == "I")) {
+                e.preventDefault();
+            }
+        };
+    </script>
     <style>
+        /* For small devices like mobile phones */
+        @media screen and (max-width: 600px) {
+            .nav {
+                flex-direction: column; /* Stack navigation items vertically */
+                text-align: center;
+            }
+
+            .nav ul {
+                flex-direction: column; /* Stack navigation links vertically */
+                width: 100%;
+            }
+
+            .container-about, .container-skills, .container-certificate, .education, .contact {
+                width: 100%; /* Use full width of the viewport */
+            }
+
+            .skills .col-skill, .certifications .col-certificate {
+                width: 100%; /* Make skill and certification items full-width */
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .educationDetails {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            img {
+                width: 100px; /* Resize images for mobile */
+                height: auto;
+            }
+
+            .skill-icon, .education-icon, .social-icon img {
+                width: 40px; /* Smaller icons for mobile */
+                height: 40px;
+            }
+
+            h1, h2 {
+                font-size: 1.8em; /* Adjust font sizes for readability on small screens */
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+        *{
+            scroll-behavior: smooth;
+        }
          .nav-main{
-            width: 100vh;
+            width: 100vw;
         } 
          body{
             background-color:  rgb(233, 225, 217);
@@ -18,6 +77,8 @@
             width:100%;
             justify-content: space-evenly;
             background-color: rgb(176, 160, 142);
+            z-index: 1000;
+            width: 100%; 
             font-weight: bold;
             position:fixed;
             /* padding-bottom: 40px; */
@@ -117,7 +178,6 @@
             width: 50px;
             height: 50px;
             margin-bottom: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
         }

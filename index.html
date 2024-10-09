@@ -17,18 +17,377 @@
         };
     </script>
     <style>
-        /* For small devices like mobile phones */
-        @media screen and (max-width: 600px) {
+        @media screen and (min-width: 601px) {
+            * {
+                scroll-behavior: smooth;
+            }
+            
+            .section {
+                margin-top: 60px; /* Adjust this value based on your navbar height */
+            }
+
+            .nav-main {
+                width: 100vw;
+            }
+
+            body {
+                background-color: rgb(233, 225, 217);
+            }
+
             .nav {
-                flex-direction: column;
-                /* Stack navigation items vertically */
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-evenly;
+                background-color: rgb(176, 160, 142);
+                z-index: 1000;
+                width: 100%;
+                font-weight: bold;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+
+            #child1 {
+                width: 30%;
+                font-size: large;
+                align-items: center;
+            }
+
+            #child2 {
+                width: 20%;
+            }
+
+            #child3 {
+                width: 40%;
+            }
+
+            #child3 ul {
+                list-style-type: none;
+                display: flex;
+                font-size: larger;
+                justify-content: space-evenly;
+
+            }
+
+            .container-about {
+                align-content: center;
+                padding-top: 38px;
+                text-align: center;
+                width: 170vh;
+                margin: auto;
+            }
+
+            .container-about p {
+                margin-left: 30%;
+                margin-right: 30%;
+                align-content: center;
+                text-align: cener;
+            }
+
+            .about h1 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                color: #373535;
                 text-align: center;
             }
 
-            .nav ul {
-                flex-direction: column;
-                /* Stack navigation links vertically */
+            .about img {
+                border-radius: 50%;
+            }
+
+            #resume {
+                background-color: rgb(212, 212, 199);
+                text-align: center;
+                font-size: x-large;
+                height: 5vh;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .about p {
+                display: block;
+                text-align: center;
+                font-size: larger;
+                margin-top: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            a {
+                color: #000305;
+                text-decoration: none;
+                background-color: transparent;
+            }
+
+            .container-skills {
+                padding-top: 38px;
+                align-content: center;
+                text-align: center;
+                width: 170vh;
+                margin: auto;
+            }
+
+            .skills h1 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                color: #373535;
+                text-align: center;
+            }
+
+            .row {
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                margin-right: -15px;
+                margin-left: -15px;
+            }
+
+            .col-skill {
+                -ms-flex: 0 0 25%;
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+
+            .skill-icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+            }
+
+            .col-skill p {
+                font-size: 1.15em;
+                margin-bottom: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            .container-certificate {
+                padding-top: 38px;
+                align-content: center;
+                text-align: center;
+                width: 170vh;
+                margin: auto;
+            }
+
+            .certifications h1 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                color: #373535;
+                text-align: center;
+            }
+
+            .about a {
+                font-size: x-large;
+                font-weight: bold;
+                color: #6f6c6c;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            .col-certificate {
+                -ms-flex: 0 0 25%;
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+
+            .col-certificate {
+                font-size: 1.15em;
+                margin-bottom: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            .col-certificate {
+                position: relative;
+                width: 80%;
+                padding-right: 50px;
+                padding-left: 50px;
+            }
+
+            .btn:not(:disabled):not(.disabled) {
+                cursor: pointer;
+            }
+
+            .btn-gradient {
+                background: linear-gradient(to right, #e1b7ac, #afaaa6);
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+
+            .btn {
+                display: inline-block;
+                font-weight: 400;
+                color: #212529;
+                text-align: center;
+                vertical-align: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-color: transparent;
+                border: 1px solid transparent;
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                border-radius: .25rem;
+            }
+
+            .education {
+                padding-top: 38px;
+                align-content: center;
+                text-align: center;
+                width: 170vh;
+                margin: auto;
+            }
+
+            .educationDetails h1 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                color: #373535;
+                text-align: center;
+            }
+
+            .educationDetails {
+                width: 170vh;
+                align-items: center;
+                /* margin-left: 180px; */
+                height: 65vh;
+            }
+
+            .education-icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                /* margin-bottom: 20px;  */
+            }
+
+            .contact {
+                padding-top: 38px;
+                align-content: center;
+                text-align: center;
+                width: 201vh;
+                margin: auto;
+            }
+
+            .contactInfo {
+                width: 170vh;
+                align-items: center;
+                height: 35vh;
+                background-color: #d4d0cc;
+            }
+
+            .contactInfo h2 {
+                font-size: 2.5em;
+                padding-top: 30px;
+                color: #373535;
+                text-align: center;
+            }
+
+            .contactInfo p {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: large;
+            }
+
+            .social-icon img {
+                border-radius: 50%;
+            }
+        }
+        
+            @media screen and (max-width: 600px) {
+            * {
+                scroll-behavior: smooth;
+            }
+
+            .section {
+                margin-top: 70px; 
+            }
+
+            body {
+                background-color: rgb(241, 213, 184); 
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden; 
+            }
+            .nav-main {
+                width: 100vw;
+            }
+
+            .nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 width: 100%;
+                background-color: rgb(176, 160, 142);
+                padding: 10px;
+                height: 35px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+            }
+
+            .nav-name {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: white; 
+            }
+
+            .hamburger {
+                font-size: 2em; 
+                color: rgb(14, 1, 1); 
+                cursor: pointer;
+                display: block;
+                position: fixed; 
+                top: 7px;
+                right: 30px;
+                z-index: 1000; 
+            }   
+
+            .child3, .mobile-menu {
+                display: none; 
+                text-align: left;
+                width: 30%;
+                flex-direction: column; 
+                position: absolute; 
+                top: 60px; 
+                right: 30px; 
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+                z-index: 900; 
+            }
+
+            #hamburger.active + .child3 {
+                display: flex; 
+            }
+
+            #child2 {
+                width: auto; 
+                text-align: center; 
+            }
+
+            #child3 ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column; 
+                justify-content: space-between; 
+                padding: 0;
+                margin: 0;
+            }
+            
+            #child3 ul li {
+                margin-bottom: 10px; 
+            }
+
+            a {
+                color: #191d1f;
+                text-decoration: none;
+                background-color: transparent;
             }
 
             .container-about,
@@ -36,343 +395,243 @@
             .container-certificate,
             .education,
             .contact {
-                width: 100%;
-                /* Use full width of the viewport */
+                width: 90%; 
+                margin: 60px auto; 
+                padding: 10px; 
+                box-sizing: border-box; 
+                margin-top: 20px;
+            }
+
+            .about h1,
+            .skills h1,
+            .certifications h1,
+            .educationDetails h1 {
+                font-size: 1.8em; 
+                margin-top: 50px;
+                margin-bottom: 20px;
+                color: #373535;
+                text-align: center;
+            }
+
+            .about img {
+                border-radius: 50%; 
+                width: 100px; 
+                height: auto; 
+                margin-left: 120px;
+            }
+
+            .about p {
+                display: block;
+                text-align: center;
+                font-size: 1em;
+                margin-top: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             }
 
             .skills .col-skill,
             .certifications .col-certificate {
-                width: 100%;
-                /* Make skill and certification items full-width */
+                width: 100%; 
                 max-width: 100%;
-                margin-bottom: 20px;
+                margin-bottom: 20px; 
             }
 
             .educationDetails {
-                margin-left: 0;
                 width: 100%;
+                margin-left: 0; 
             }
 
             img {
-                width: 100px;
-                /* Resize images for mobile */
+                width: 80px; /* Resize images for mobile */
                 height: auto;
             }
 
             .skill-icon,
             .education-icon,
             .social-icon img {
-                width: 40px;
-                /* Smaller icons for mobile */
+                width: 40px; 
                 height: 40px;
             }
 
-            h1,
-            h2 {
-                font-size: 1.8em;
-                /* Adjust font sizes for readability on small screens */
-            }
-
             p {
-                font-size: 1em;
+                font-size: 0.9em; 
+                line-height: 1.4; 
+            }
+
+            .btn {
+                display: inline-block;
+                font-weight: 400;
+                color: #212529;
+                text-align: center;
+                vertical-align: middle;
+                user-select: none;
+                background-color: transparent;
+                border: 1px solid transparent;
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                border-radius: .25rem;
+                margin: 10px 0; 
+            }
+
+            .btn-gradient {
+                background: linear-gradient(to right, #e1b7ac, #afaaa6);
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+
+            .container-about,
+            .container-skills,
+            .container-certificate,
+            .education,
+            .contact {
+                padding: 10px 10px 20px 10px; 
+                background-color: rgba(255, 255, 255, 0.8); 
+                border-radius: 8px; 
+            }
+
+            #resume {
+                background-color: rgb(212, 212, 199);
+                text-align: center;
+                font-size: x-large;
+                height: 5vh;
+                width: 87%;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            
+            .skills .row {
+                display: flex;
+                flex-wrap: wrap; 
+                justify-content: center; 
+            }
+
+            .col-skill {
+                text-align: center; 
+                margin: 10px; 
+            }
+
+            .certifications .row {
+                display: flex;
+                flex-wrap: wrap; 
+                justify-content: center;
+            }
+
+            .col-certificate {
+                text-align: center; 
+                margin: 10px; 
+            }
+
+            .educationDetails {
+                display: flex;
+                flex-direction: column; 
+                align-items: center; 
+                width: 100%; 
+                margin-left: 0; 
+            }
+
+            .clg {
+                text-align: center; 
+                margin: 10px; 
+            }
+
+            .contact {
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center; 
+                width: 100%; 
+                margin: 60px auto; 
+            }
+
+            .social-icon {
+                display: flex; 
+                justify-content: center; 
+                margin-top: 10px; 
+            }
+
+            .social-icon a {
+                margin: 0 10px; 
             }
         }
-
-        * {
-            scroll-behavior: smooth;
-        }
-
-        .nav-main {
-            width: 100vw;
-        }
-
-        body {
-            background-color: rgb(233, 225, 217);
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            justify-content: space-evenly;
-            background-color: rgb(176, 160, 142);
-            z-index: 1000;
-            width: 100%;
-            font-weight: bold;
-            position: fixed;
-            /* padding-bottom: 40px; */
-            top: 0;
-            left: 0;
-            right: 0;
-        }
-
-        #child1 {
-            width: 30%;
-            font-size: large;
-            align-items: center;
-        }
-
-        #child2 {
-            width: 20%;
-        }
-
-        #child3 {
-            width: 40%;
-        }
-
-        #child3 ul {
-            list-style-type: none;
-            display: flex;
-            font-size: larger;
-            justify-content: space-evenly;
-
-        }
-
-        .container-about {
-            align-content: center;
-            padding-top: 38px;
-            text-align: center;
-            width: 100vh;
-            margin: auto;
-            /* background-color: #b5b8ba; */
-        }
-
-        .about h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #373535;
-            text-align: center;
-        }
-
-        .about img {
-            border-radius: 50%;
-        }
-
-        #resume {
-            background-color: rgb(212, 212, 199);
-            text-align: center;
-            font-size: x-large;
-            height: 5vh;
-            padding-top: 7px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .about p {
-            display: block;
-            text-align: center;
-            font-size: larger;
-            margin-top: 20px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        a {
-            color: #000305;
-            text-decoration: none;
-            background-color: transparent;
-        }
-
-        .container-skills {
-            padding-top: 38px;
-            align-content: center;
-            text-align: center;
-            width: 170vh;
-            margin: auto;
-        }
-
-        .skills h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #373535;
-            text-align: center;
-        }
-
-        .row {
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            margin-right: -15px;
-            margin-left: -15px;
-        }
-
-        .col-skill {
-            -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-
-        .skill-icon {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
-        }
-
-        .col-skill p {
-            font-size: 1.15em;
-            margin-bottom: 20px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        .container-certificate {
-            padding-top: 38px;
-            align-content: center;
-            text-align: center;
-            width: 170vh;
-            margin: auto;
-        }
-
-        .certifications h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #373535;
-            text-align: center;
-        }
-
-        .about a {
-            font-size: x-large;
-            font-weight: bold;
-            color: #6f6c6c;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        .col-certificate {
-            -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-
-        .col-certificate {
-            font-size: 1.15em;
-            margin-bottom: 20px;
-            /* margin-left: 60px; */
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        .col-certificate {
-            position: relative;
-            width: 80%;
-            padding-right: 50px;
-            padding-left: 50px;
-        }
-
-        .btn:not(:disabled):not(.disabled) {
-            cursor: pointer;
-        }
-
-        .btn-gradient {
-            background: linear-gradient(to right, #e1b7ac, #afaaa6);
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .btn {
-            display: inline-block;
-            font-weight: 400;
-            color: #212529;
-            text-align: center;
-            vertical-align: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            background-color: transparent;
-            border: 1px solid transparent;
-            padding: .375rem .75rem;
-            font-size: 1rem;
-            line-height: 1.5;
-            border-radius: .25rem;
-        }
-
-        .education {
-            padding-top: 38px;
-            align-content: center;
-            text-align: center;
-            width: 201vh;
-            /* background-color: rgb(219, 212, 203); */
-            margin: auto;
-        }
-
-        .educationDetails h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #373535;
-            text-align: center;
-        }
-
-        .educationDetails {
-            width: 150vh;
-            align-items: center;
-            margin-left: 180px;
-            height: 65vh;
-        }
-
-        .education-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            /* margin-bottom: 20px;  */
-        }
-
-        .contact {
-            padding-top: 38px;
-            align-content: center;
-            text-align: center;
-            width: 201vh;
-            /* background-color: rgb(219, 212, 203); */
-            margin: auto;
-        }
-
-        .contactInfo {
-            width: 200vh;
-            align-items: center;
-            /* margin-left: 35px; */
-            height: 35vh;
-            background-color: #d4d0cc;
-        }
-
-        .contactInfo h2 {
-            font-size: 2.5em;
-            padding-top: 30px;
-            /* margin-bottom: 10px; */
-            color: #373535;
-            text-align: center;
-        }
-
-        .contactInfo p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: large;
-        }
-
-        .social-icon img {
-            border-radius: 50%;
-        }
-    </style>
+    </style> 
 </head>
 
 <body>
-    <div class="nav-main">
-        <div class="nav">
-            <div id="child1">
-                <h2>Keerthi S R</h2>
-            </div>
-            <div id="child2"></div>
-            <div id="child3">
-                <ul>
-                    <li><a href="#aboutOne">About</a></li>
-                    <li><a href="#skillsOn">Skills</a></li>
-                    <li><a href="#certificateOn">Certification</a></li>
-                    <li><a href="#educationInfo">Education</a></li>
-                    <li><a href="#contactMe">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <div class="nav-main" id="nav-container"></div>
+    <script>
+        function renderNav(isMobile) {
+            const navContainer = document.getElementById('nav-container');
+    
+            if (isMobile) {
+                navContainer.innerHTML = `
+                    <div class="nav">
+                        <div id="child1">
+                            <h2>Keerthi S R</h2>
+                        </div>
+                        <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
+                        <div id="child3" class="mobile-menu">
+                            <ul>
+                                <li><a href="#aboutOne">About</a></li>
+                                <li><a href="#skillsOn">Skills</a></li>
+                                <li><a href="#certificateOn">Certification</a></li>
+                                <li><a href="#educationInfo">Education</a></li>
+                                <li><a href="#contactMe">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else {
+                navContainer.innerHTML = `
+                    <div class="nav">
+                        <div id="child1">
+                            <h2>Keerthi S R</h2>
+                        </div>
+                        <div id="child2"></div>
+                        <div id="child3">
+                            <ul>
+                                <li><a href="#aboutOne">About</a></li>
+                                <li><a href="#skillsOn">Skills</a></li>
+                                <li><a href="#certificateOn">Certification</a></li>
+                                <li><a href="#educationInfo">Education</a></li>
+                                <li><a href="#contactMe">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+    
+        const isMobile = window.innerWidth <= 600;
+        renderNav(isMobile);
+    
+        window.addEventListener('resize', () => {
+            const isMobile = window.innerWidth <= 600;
+            renderNav(isMobile);
+        });
+    
+        function toggleMenu() {
+        const child3 = document.getElementById('child3');
+        if (child3.style.display === 'block' || !child3.style.display) {
+            child3.style.display = 'none';  
+        } else {
+            child3.style.display = 'block'; 
+        }
+
+        document.getElementById("hamburger").addEventListener("click", function() {
+            this.classList.toggle("active"); 
+        });
+
+        const menuLinks = document.querySelectorAll('#child3 a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                child3.style.display = 'none'; 
+            });
+        });
+    }
+    </script>
     <section id="aboutOne">
         <div class="container-about">
             <div class="about">
@@ -381,13 +640,11 @@
                 <p>Hello, I am Keerthi S R, a motivated and an independent individual dedicated to delivering excellent
                     results, with my ability to learn fast and engage in active listening, I'm eager to apply my skills and knowledge
                     to make a difference. I'm seeking a responsible role in a reputable organization.</p>
-                <!-- <p id="resume"><a href="RESUME_KEERTHI_S_R.pdf" target="_blank">Resume</a></p> -->
             </div>
-        </div>
-    </section>
-    <div class="resume">
-        <p id="resume"><a href="cv/KeerthiSR.pdf" target="_blank">Resume</a></p>
+        <a id="resume" href="cv/KeerthiSR.pdf" target="_blank"
+        class="btn btn-gradient">Resume</a>
     </div>
+</section>
     <section id="skillsOn">
         <div class="container-skills">
             <div class="skills">
